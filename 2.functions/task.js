@@ -21,7 +21,7 @@ function getArrayParams(arr) {
 
 }
 // Задание 2
-function func(arr) {
+function worker(arr) {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
@@ -37,11 +37,10 @@ function makeWork(arrOfArr, func) {
     }
   }
   return max;
-
 }
 
 // Задание 3
-function func(arr) {
+function worker2(arr) {
   let max = -Infinity;
   let min = Infinity;
   for (let i = 0; i < arr.length; i++) {
@@ -54,14 +53,4 @@ function func(arr) {
   }
   return(Math.abs(max - min));
 }
-function makeWork(arrOfArr, func) {
-  let max = -Infinity;
-  for (let i = 0; i < arrOfArr.length; i++) {
-    const funcResult = func(arrOfArr[i]);
-    if (funcResult > max) {
-      max = funcResult;
-    }
 
-  }
-  return max;
-}
