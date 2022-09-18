@@ -1,11 +1,7 @@
 function compareArrays(arr1, arr2) {
-  if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
-    return true;
+    return arr1.length === arr2.length && arr1.every((item, index) => item === arr2[index]);
   }
-  else {
-    return false;
-  }
-}
+
 
 function advancedFilter(arr) {
   let resultArr = arr.filter(number => number > 0).filter(number => number % 3 === 0).map(number => number * 10);
