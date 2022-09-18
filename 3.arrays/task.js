@@ -1,15 +1,13 @@
 function compareArrays(arr1, arr2) {
-  let result;
-
-  // Ваш код
-
-  return result; // boolean
+  if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 function advancedFilter(arr) {
-  let resultArr;
-
-  // Ваш код
-
-  return resultArr; // array
+  let resultArr = arr.filter(number => number > 0).filter(number => number % 3 === 0).map(number => number * 10);
+  return resultArr;
 }
