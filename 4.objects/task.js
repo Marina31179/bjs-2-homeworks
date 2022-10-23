@@ -1,37 +1,41 @@
-let Student = function(name, gender, age, subject) {
+let Student = function(name, gender, age) {
     this.name = name;
-    this.gender = (gender != 'female') ? 'male' : 'femail';
+    this.gender = gender;
     this.age = age;
-    this.subject = subject;
-    Student.prototype.setSubject = function (subjectName) {
-        subject = subjectName;
-        return subject;//ваш код
+}
+
+Student.prototype.setSubject =  function(subjectName) {
+    if (Student.subject === undefined) {
+        this.subjectName = Student.subject;
     }
-
-    Student.prototype.addMark = function(mark) {
-        if (this.marks === undefined) {
-            this.marks = [mark]; // добавить первую оценку
-        } else {
-            this.marks.push(mark);
-
-        }
+}
+Student.prototype.addMark = function(mark) {
+    if (this.mark === undefined) {
+        this.mark = [mark];
+    } else {
+        this.mark.push(mark);
     }
-    Student.prototype.addMarks(mark) = function() {
-        [marks].push(mark);
-        return [marks];
+}
+Student.prototype.addMarks = function(...marks) {
+    this.marks.push[marks];
+}
+
+
+Student.prototype.getAverage = function() {
+    let sum = 0;
+    let num;
+    for (let i = 0; i < [marks].length; i++) {
+        num = Number(marks[i]);
+        sum += num[i];
+        avg = sum / [marks].length;
     }
+}
 
-    Student.prototype.getAverage(avg) = function() {
-        let sum = 0;
-        for (let i = 0; i < [mark].length; i++) {
-            sum += marks[i];
-        }
-        let avg = sum / [marks].length;
-        return { avg: avg };
-
+Student.prototype.exclude = function(reason) {
+    if (avg < 3) {
+        delete subject;
+        delete [marks];
+        Student.excluded = reason;
+        return reason;
     }
-    console.log('age: ' + 'gender: ' + 'marks: ' + 'name: ' + 'subject: ');
-
-
-
 }
