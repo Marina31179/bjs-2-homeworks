@@ -3,24 +3,29 @@ class PrintEditionItem {
         this.name = name;
         this.releaseDate = releaseDate;
         this.pagesCount = pagesCount;
-        this.state = 100;
+        this.state = "100";
         this.type = null;
     }
 
     fix() {
-        console.log(1.5*this.state);
+        this.state = this._state * 1.5;
+        return this.state;
     }
+
     set state(value) {
         if (value < 0) {
-            this.state = 0;
+            this._state = 0;
         }
         if (value > 100) {
-            this.state = 100;
+            this._state = 100;
         }
+        else {
+            return this._state;
 
+        }
     }
     get state() {
-        console.log(this.state);
+        console.log(this._state);
     }
 }
 class Magazine extends PrintEditionItem {
@@ -53,3 +58,38 @@ class DetectiveBook extends Book {
         this.type = "detective";
     }
 }
+
+class Library {
+    constructor(name) {
+        this.name = name;
+        this.books = [];
+    }
+    LibraryaddBooks(book) {
+        if (this.namebook.state > 30) {
+            this._book = book;
+        }
+    }
+    findBookBy(type, author, releaseDate) {
+        this.type = type;
+        this.author = author;
+        this.releaseDate = releaseDate;
+        if (this.book.value > 1) {
+            return this.book;
+        }
+        else {
+            return null;
+        }
+    }
+
+    giveBookByName(bookName) {
+        this.bookName = bookName;
+        if (bookName === true) {
+            delete this._book;
+        }
+        else {
+            return null;
+        }
+    }
+
+}
+  
