@@ -61,38 +61,37 @@ class DetectiveBook extends Book {
     }
 }
 
-class Library extends Book {
-    constructor(author, name, releaseDate, pagesCount) {
-        super(author, name, releaseDate, pagesCount);
+class Library {
+    constructor(name) {
+        this._name = name;
         this._books = [];
     }
 
     addBook() {
-        if (this.book.state > 30) {
-            this.books = push.book;
+        if (this._book.state > 30) {
+            this._books = push.book;
         }
     }
-    findBookBy(type, author, releaseDate) {
-        this.type = type;
-        this.author = author;
-        this.releaseDate = releaseDate;
-        if (this.book.value >= 1) {
-            return this.book;
-        }
+    findBookBy(type) {
+        this._type = type;
+        let book = {author, releaseDate, pagesCount};
+        this._book = book;
+        if (this._type === this.type && this._book === this.value) {
+            return book}
         else {
             return null;
         }
     }
+
 
     giveBookByName(bookName) {
-        this.bookName = bookName;
-        if (this.bookName === bookName) {
-            delete this.book;
+        if (this._bookName === bookName) {
+            delete this._bookName
         }
         else {
             return null;
         }
     }
-
 }
+
 
