@@ -62,16 +62,20 @@ class DetectiveBook extends Book {
 }
 
 class Library {
+    push;
     constructor(name) {
         this._name = name;
         this._books = [];
     }
 
-    addBook() {
+    addBook(book, state) {
+        this._book = book;
+        this._book.state = state;
         if (this._book.state > 30) {
-            this._books = push.book;
+            this._books = this.push.this._book;
         }
     }
+
     findBookBy(type) {
         this._type = type;
         let book = {author, releaseDate, pagesCount};
